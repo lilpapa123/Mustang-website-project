@@ -1,0 +1,533 @@
+*{
+    margin:0;
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #d3000000;
+}
+.header {
+
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.06);
+    z-index: 999;
+    background-color:#fff;
+    padding: 5px 40px;
+    position: sticky;
+ 
+    top: 0;
+}
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header nav .logo img {
+    height: 50px;
+
+}
+.header nav .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header nav .nav-links ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+ nav .nav-links ul li:hover:after{
+    width: 100%;
+}
+
+
+.backgroundclip{
+    padding: 1px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    text-align: center;
+
+}
+
+.content h1{
+    font-size: 95px;
+    color: #f3f3f3;
+    margin-bottom: 50px; 
+    font-family: "Playwrite IN", serif;
+}
+.content a{
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+}
+.content a:hover{
+    background-color:#f0f0f0;
+    color: #081534;
+}
+.eitro{
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+}
+
+
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    animation: moveRow 10s linear infinite;
+}
+.row img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+
+/*------ Row movement animation----------- */
+/* Row wrapper to contain both rows */
+.row-wrapper {
+    display: flex;
+    overflow: hidden; /* Prevents content from spilling out */
+    position: relative;
+    width: 100%;
+}
+
+/* Row styling */
+.row {
+    display: flex;
+    animation: moveRow 19s linear infinite; /* Infinite scrolling */
+}
+
+.row img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px; /* Space between images */
+}
+
+/* Keyframes for seamless animation */
+@keyframes moveRow {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Adjust duplicated row to start where the first ends */
+.row-wrapper .row:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Starts where the first row ends */
+    animation: moveRow 19s linear infinite;
+}
+
+
+
+/*------------product list ------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.sweatshirts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.sweatshirt {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sweatshirt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sweatshirt img {
+    width: 100%;
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.sweatshirt h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.sweatshirt p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.sweatshirt button{
+padding-top: 10px;
+
+}
+
+@media (max-width: 768px) {
+    .sweatshirts {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/*----h1 ----*/
+.our{
+    background:linear-gradient(45deg,rgb(15, 0, 82),rgb(66, 0, 0)) ;
+}
+#H12{
+    color:white;
+    display: flex;
+    font-size: 75PX;
+    justify-content: center;
+    font-family:"Playwrite IN", serif;;
+}
+.buy-now {
+    background-color:#000B58; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition:  0.3s; 
+    transform: 0.2s;
+    align-self: center; /* Ensures the button is centered */
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
+.buy-now:hover {
+    background-color: #003161; /* Darker blue */
+    transform: scale(1.05);
+}
+
+.buy-now:active {
+    transform: scale(0.95);
+}
+
+/*-------payment method/* Modal Styles */
+.card-container-modal {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .card-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Additional styling for modal buttons, card, and inputs */
+  button {
+    padding: 10px 20px;
+    background: #000B58;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #003161;
+  }
+  
+
+  form ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+  }
+  form ul li img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain;
+}
+
+.container-3{
+    min-height: 0px;
+    background-color: #ffffff;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 0px;
+}
+
+.container-3 form{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0, 0.1);
+    padding: 20px;
+    width: 600px;
+}
+.container-3 form .inputBox{
+    margin-top: 20px; 
+    margin-left: 30px;
+}
+.container-3 form .inputBox span{
+    display: block;
+    color: #000000;
+    padding-bottom:5px;
+}
+.container-3 form .inputBox input,
+.container-3 form .inputBox select{
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0, 0,0.3);
+    color: #444;;
+}
+
+.container-3 form .flex-box{
+    display: flex;
+    gap: 15px;
+}
+.container-3 form .flexbox .inputBox{
+    flex: 1 150px;
+}
+.container-3 form .submit-btn{
+    width: 90%;
+    background:linear-gradient(45deg,rgb(0, 6, 86),rgb(165, 0, 0)) ;
+   margin-top: 20px;
+   margin-left: 30px;
+   padding: 10px;
+   font-size: 20px;
+   color: #fff;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 0.2s linear;
+   
+}
+.container-3 form .submit-btn:hover{
+    letter-spacing:2px;
+    opacity: 0.8s;
+}
+.container-3 .card-container{
+    margin-bottom: -10px;
+    background-color: #ffffff00;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.container-3 .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg,rgb(0, 6, 86),rgb(145, 0, 0));
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+.container-3 .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container-3 .card-container .front .image img{
+    height: 50px;
+}
+
+.container-3 .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container-3 .card-container .front .flexbox{
+    display: flex;
+}
+
+.container-3 .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container-3 .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+.container-3 .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg,rgb(0, 6, 86),rgb(145, 0, 0));
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container-3 .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container-3 .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container-3 .card-container .back .box span{
+    color:#ffffff;
+    font-size: 15px;
+}
+
+.container-3 .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container-3 .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}  
+/*--------footer-----------*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(pic/homepage.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width:700px){
+    .cta h1{
+        font-size:24px;;
+    }
+}
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight:600;
+}
+
+.icons i{
+    
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    color: #133a7c;
+}
+
+
+
+/*------button that i copied from index file in the first page -----------*/
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover {
+    border: 1px solid #ffffff;;
+    background: #ffffff;;
+    transition: 1s;
+    color:black;
+}
+.testimonial-grid{
+    display:inline-grid;
+}
